@@ -3,9 +3,7 @@ import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 export function indexValue() {
   const task = getFromLocalStorage('task');
   task.sort((a, b) => a.index - b.index);
-
   task.forEach((task, index) => task[index]  + 1);
- 
   addTOLocalStorage('task', task);
 }
 
